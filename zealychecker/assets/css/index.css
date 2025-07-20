@@ -1,0 +1,232 @@
+/* styles.css */
+
+:root {
+  --green:        #00ff95;
+  --dark:         #000;
+  --card:         rgba(0,0,0,0.55);
+  --input-bg:     #0e0e0e;
+  --placeholder:  #6b6b6b;
+}
+
+/* reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+html, body {
+  height: 100%;
+  background: var(--dark);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* gradasi hijau kiri-bawah */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle 800px at left bottom,
+    rgba(0,255,149,0.45) 0%,
+    rgba(0,255,149,0.25) 35%,
+    rgba(0,255,149,0.12) 55%,
+    rgba(0,0,0,0)        75%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ========== HEADER ========== */
+header {
+  position: fixed;
+  top: 24px; left: 32px; right: 32px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.launch {
+  margin-left: auto;
+  padding: 14px 27px;
+  border-radius: 12px;
+  /* fallback gradient jika gambar gagal dimuat */
+  background: linear-gradient(
+    135deg,
+    #c4f0ff 0%,
+    #e7c7ff 40%,
+    #fff7d6 70%,
+    #c4f0ff 100%
+  );
+  /* override dengan gambar */
+  background-image: url('/assets/img/launch-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* jika mau mem-blend gradient + gambar */
+  /* background-blend-mode: overlay; */
+  color: #000;
+  font-weight: 100;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 0 12px rgba(255,255,255,0.45);
+  transition: transform .15s;
+}
+.launch:hover {
+  transform: scale(1.05);
+}
+
+.launch .arrow {
+  font-size: 1.4em;     /* atur ukuran */
+  font-weight: 700;     /* atur ketebalan */
+  margin-left: 0.3em;   /* jarak dari teks */
+  display: inline-block;
+  line-height: 1;
+}
+
+/* ========== MAIN CARD ========== */
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 160px;
+  text-align: center;
+}
+.card {
+  /* background gelap semi-transparan */
+  background: #09130e;
+  /* blur isi di belakangnya */
+  backdrop-filter: blur(20px);
+  /* sudut melengkung */
+  border-radius: 16px;
+  /* border tipis putih transparan */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* glow hijau lembut di sekitar kartu */
+  box-shadow:
+    0 0 200px rgba(0, 255, 149, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.6);
+  
+  /* padding & lebar seperti biasa */
+  width: 100%;
+  max-width: 330px;
+  padding: 30px 20px;
+}
+.card h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+.card p {
+  font-size: 18px;
+  color: #d1d1d1;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.card input {
+  width: 100%;
+  padding: 13px 13px;
+  margin-bottom: 18px;
+  border: 0.5px solid #3c423f;
+  border-radius: 7px;
+  background: #171918;
+  color: #fff;
+  font-size: 14px;
+}
+.card input::placeholder {
+  color: var(--placeholder);
+}
+.card button {
+  width: 100%;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #08eb7f;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s;
+}
+.card button:hover {
+  background: #08eb7f;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  position: fixed;
+  bottom: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  pointer-events: none;
+}
+footer .copyright {
+  font-size: 15px;
+  pointer-events: auto;
+}
+footer .copyright a {
+  color: #f7b306;
+  text-decoration: none;
+}
+.socials {
+  display: flex;
+  gap: 55px;
+  pointer-events: auto;
+}
+.socials a img {
+  width: 27px;
+  height: 27px;
+  filter: invert(100%);
+  transition: transform .15s;
+}
+.socials a:hover img {
+  transform: scale(1.15);
+}
+
+.error-message {
+  color: #dc4e45;
+  font-size: 14px;
+  margin-top: 12px;
+  min-height: 18px;     /* supaya layout tidak bergeser */
+  text-align: center;
+}
+
+/* Warna khusus untuk nominal reward */
+.reward-amount {
+  color: #06c96c; /* ganti dengan kode warna yang diinginkan */
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-top: -5px;
+}
+
+/* tombol MetaMask */
+.card-button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 24px;
+  background: var(--green);
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.card-button:hover {
+  background: #06c96c;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+  .card h1 { font-size: 24px; }
+  .card p  { font-size: 15px; }
+}
+
