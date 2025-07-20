@@ -1,6 +1,19 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://useedecentral.com", 
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/zealychecker",        "destination": "/zealychecker/index.html" },
-    { "source": "/zealychecker/:path*", "destination": "/zealychecker/:path*" }
+    {
+      "source": "/zealychecker",
+      "destination": "/zealychecker/index.html"
+    },
+    {
+      "source": "/zealychecker/:path*",
+      "destination": "/zealychecker/:path*"
+    }
   ]
 }
