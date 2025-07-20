@@ -4,3 +4,9 @@
     { "source": "/zealychecker/:path*", "destination": "/zealychecker/:path*" }
   ]
 }
+
+{
+  "routes": [
+    { "src": "/", "dest": "api/redirect.js" }
+  ]
+}
