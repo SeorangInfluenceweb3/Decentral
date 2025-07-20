@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/zealychecker",        "destination": "/zealychecker/index.html" },
+    { "source": "/zealychecker/:path*", "destination": "/zealychecker/:path*" }
+  ]
+}
