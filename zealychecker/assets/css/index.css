@@ -63,7 +63,7 @@ header {
     #c4f0ff 100%
   );
   /* override dengan gambar */
-  background-image: url('/assets/img/launch-bg.png');
+  background-image: url('/zealychecker/assets/img/launch-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
