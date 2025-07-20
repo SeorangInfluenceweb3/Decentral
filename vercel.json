@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "https://useedecentral.com", 
+      "destination": "https://usedecentral.com", 
       "permanent": true
     }
   ],
