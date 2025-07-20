@@ -1,16 +1,6 @@
 {
   "rewrites": [
-    {
-      "source": "/zealychecker",
-      "destination": "/zealychecker/index.html"
-    },
-    {
-      "source": "/zealychecker/:path*",
-      "destination": "/zealychecker/:path*"
-    },
-    {
-      "source": "/",
-      "destination": "/api/redirect.js"
-    }
+    { "source": "/zealychecker",        "destination": "/zealychecker/index.html" },
+    { "source": "/zealychecker/:path*", "destination": "/zealychecker/:path*" }
   ]
 }
