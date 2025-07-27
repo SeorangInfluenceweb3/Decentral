@@ -22,14 +22,14 @@ function handleCheck() {
   const max = 1270.72;
   const reward = (Math.random() * (max - min) + min).toFixed(2);
 
-  // Render tampilan hasil + tombol MetaMask
+  // Render tampilan hasil + tombol OKX Wallet
   card.innerHTML = `
     <p>Zealy Username: <strong>${username}</strong></p>
     <h2 class="reward-amount">${reward} $DCT</h2>
     <p>
       Congratulation! Your reward has been sent to your wallet connected on Zealy. 
       Add the $DCT token to view your token. 
-      We recommend using MetaMask.
+      We recommend using OKX Wallet.
     </p>
     <a
       id="DecentralBtn"
@@ -37,7 +37,7 @@ function handleCheck() {
       target="_blank"
       class="card-button"
     >
-      Add $DCT To Your MetaMask
+      Add $DCT To Your OKX Wallet
     </a>
   `;
 }
