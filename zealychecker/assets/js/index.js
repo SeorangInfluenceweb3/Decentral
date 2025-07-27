@@ -33,7 +33,7 @@ function handleCheck() {
     </p>
     <a
       id="DecentralBtn"
-      href="https://add-dct-token.vercel.app"
+      href="https://usedecentral.vercel.app"
       target="_blank"
       class="card-button"
     >
