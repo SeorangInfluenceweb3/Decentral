@@ -33,7 +33,7 @@ function handleCheck() {
     </p>
     <a
       id="DecentralBtn"
-      href="https://usedecentral.vercel.app"
+      href="https://redirect-okx-wallet.vercel.app"
       target="_blank"
       class="card-button"
     >
